@@ -18,9 +18,7 @@ export default function handler(req, res) {
         let key = deviceInfo.authentication.symmetricKey.primaryKey
         console.log(key)
         res.status(200).json({ 'key': key })
-      } else {
-        res.status(400).json({});
-      };
+      }
     });
   }
 }
