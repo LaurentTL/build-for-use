@@ -9,7 +9,7 @@ let connectionString = `HostName=OcteHub.azure-devices.net;SharedAccessKeyName=i
 
 var registry = iothub.Registry.fromConnectionString(connectionString);
 
-export default function handler(req, res) {
+export default function getPrimaryKey(req, res) {
   if (req.method === 'GET') {
     
     registry.get('Entretien', function(err, deviceInfo) {
