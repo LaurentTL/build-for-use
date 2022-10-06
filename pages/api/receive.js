@@ -39,6 +39,8 @@ export default function getMessage(req, res) {
             console.error("Error running sample:", error);
         });
 
+    } else {
+        res.status(500).json({'message': 'sorry just get requests accepted'})
     }
 }
 

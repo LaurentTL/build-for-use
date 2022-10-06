@@ -20,5 +20,7 @@ export default function getPrimaryKey(req, res) {
         res.status(200).json({ 'key': key })
       }
     });
+  } else {
+    res.status(500).json({'message': 'sorry just get requests accepted'})
   }
 }
