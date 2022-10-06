@@ -40,7 +40,7 @@ export default function getMessage(req, res) {
         });
 
     } else {
-        res.status(500).json({'message': 'sorry just get requests accepted'})
+        res.status(405).json({'message': 'sorry just get requests accepted'})
     }
 }
 
