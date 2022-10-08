@@ -1,6 +1,6 @@
 import { EventHubConsumerClient } from "@azure/event-hubs";
 
-const connectionString = `Endpoint=sb://ihsuprodparres018dednamespace.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=TE9vDi48eu2lT+2+/y8mpLkKf8XVkwxV1e1YI2UbBqA=;EntityPath=iothub-ehub-octehub-16211286-7ed0e55670`;
+const connectionString = `${process.env.CONNEXION_KEY}`;
 
 export default function getMessage(req, res) {
     if (req.method === 'GET') {

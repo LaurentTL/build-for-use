@@ -5,7 +5,7 @@
 
 import iothub from 'azure-iothub'
 
-let connectionString = `HostName=OcteHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=TE9vDi48eu2lT+2+/y8mpLkKf8XVkwxV1e1YI2UbBqA=`;
+let connectionString = `${process.env.AZURE_KEY}`;
 
 var registry = iothub.Registry.fromConnectionString(connectionString);
 
